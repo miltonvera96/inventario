@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inicio.InicioFXMLController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Inicio">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Login" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#salirOnAction" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Personas">
+            <items>
+              <MenuItem fx:id="menuClientes" mnemonicParsing="false" onAction="#clientesOnAction" text="Clientes" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuEmpleados" mnemonicParsing="false" onAction="#empleadosOnAction" text="Empleados" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuProductos" mnemonicParsing="false" onAction="#proveedoresOnAction" text="Proveedores" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Organización">
+               <items>
+                  <MenuItem fx:id="menuDepartamentos" mnemonicParsing="false" onAction="#departamentosOnAction" text="Departamentos" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuAlmacen" mnemonicParsing="false" onAction="#almacenOnAction" text="Almacen" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#reportsOnAction" text="Mostrar" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Ordenes">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#crearOrdenOnAction" text="Crear" />
+                <MenuItem mnemonicParsing="false" onAction="#verOrdenOnAction" text="Ver" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="51.0" prefWidth="948.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="411.0" layoutY="24.0" text="Fecha:" />
+            <Label layoutX="657.0" layoutY="22.0" text="Hora:" />
+            <Label layoutX="23.0" layoutY="23.0" prefHeight="17.0" prefWidth="153.0" text="Bienvenido al Sistema" />
+            <Line endX="800.0" layoutX="109.0" layoutY="13.0" startX="-100.0" />
+            <Label fx:id="infecha" layoutX="474.0" layoutY="24.0" prefHeight="17.0" prefWidth="112.0" />
+            <Label fx:id="inhora" layoutX="712.0" layoutY="22.0" prefHeight="17.0" prefWidth="141.0" />
+         </children>
+         <padding>
+            <Insets right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="529.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

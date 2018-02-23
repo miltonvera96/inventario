@@ -1,0 +1,62 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color:  #eaeaea
+}
+
+.botones{
+    
+    -fx-font-family: "Verdana";
+    -fx-font-weight:bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #00345b;
+    -fx-padding: 5px;
+    -fx-border-radius: 3px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.tab{
+    
+    -fx-border-width: 3px;
+    -fx-border-color: #c1c1c1;
+    -fx-border: solid;
+    -fx-background-color:  #eaeaea
+}
+
+.vbox{
+    
+    -fx-border-color: #d8d8d8;
+    -fx-background-color: #d8d8d8;
+        
+}
+
+
+.buscar, .text-area {
+	-fx-font-size: 18;
+    -fx-background-color:
+    	rgb(150, 197, 217, 0.3),
+    	linear-gradient(rgb(150, 197, 217, 0.4), rgb(61, 107, 125, 0.8) 50%),
+        rgb(221, 234, 237);
+    -fx-background-insets: 0 0 -1 0, 0, 1.5;
+    -fx-background-radius: 6, 5, 4;
+    -fx-padding: 6 10 4 10;
+    -fx-effect: innershadow( gaussian, rgb(39, 60, 89, 0.9), 5, 0, 0, 2 );
+    -fx-font-family: "Arial";
+    -fx-margin-top: 10;
+}
+
+.text-area {
+	-fx-padding: 6 5 6 5;
+}
+
+.buscar:focused, .text-area:focused {
+    -fx-prompt-text-fill:
+        rgb(128,128,128);
+    -fx-background-color:
+    	rgb(235, 235, 235, 0.5),
+        rgb(0, 0, 0, 0.4),
+        rgb(236, 245, 235);
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="70d9fb83-3d4e-4282-8e55-2d937ff28ff6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from reporteEmpleados;]]>
+	</queryString>
+	<field name="idempleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sueldo" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_activo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="-27" width="595" height="106" backcolor="#006699" uuid="efbbe61a-77a4-4886-9852-4d5d2bbfb5ee"/>
+				<staticText>
+					<reportElement x="20" y="30" width="358" height="43" forecolor="#FFFFFF" uuid="b312fcb1-0e1d-42b9-89f5-22dbb84f91a6"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Empleados]]></text>
+				</staticText>
+				<image>
+					<reportElement x="406" y="0" width="188" height="106" uuid="e819b850-2d82-44fd-a1c7-5be24bf89a3d"/>
+					<imageExpression><![CDATA["/Users/Usuario/Desktop/Aldair/2016 2S/NetBeans/ProtectoBDII/src/Imagenes/12.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="99" y="0" width="102" height="20" uuid="6bb7e5e3-fb07-4c33-b472-ad963d82b98b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="79" height="20" uuid="33b5719e-9da2-4cea-8325-3f67fadec1f1"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="79" height="20" uuid="34bf090e-3ad7-4b24-a8d4-63eac8e3b504"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[sueldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="0" width="89" height="20" uuid="24181389-9dfe-4f86-bdfb-81088a1f90c3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="0" width="105" height="20" uuid="c95421a6-f294-4ee1-85d1-30c21963226c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[estado_activo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="20" width="552" height="1" uuid="7e544c0d-8901-49e1-853d-14665641c234"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="99" height="20" uuid="9854b8da-8cef-4e02-adf4-7c6b45e094a7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[idempleado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="99" height="20" uuid="bfcbe036-044f-495d-8eea-de2683caf24c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idempleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="0" width="102" height="20" uuid="5e41adea-de68-4d42-b7c3-8fb0ebfa1d49"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="79" height="20" uuid="97c2b770-57ec-49f5-8024-1c73947725cb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="79" height="20" uuid="d75a2ca3-2eb2-48af-bfec-51bc39bff188"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sueldo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="89" height="20" uuid="5a019ad4-acb7-4c94-997c-7bc5c7a7a42c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="105" height="20" uuid="08bef4cf-31d9-47a2-b145-6248b7fe53fe"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estado_activo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="20" width="552" height="1" uuid="0e250e6c-47ed-4da0-a2cf-52a02421856a"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

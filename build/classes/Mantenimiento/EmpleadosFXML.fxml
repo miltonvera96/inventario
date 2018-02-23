@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="718.0" prefWidth="912.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mantenimiento.EmpleadosFXMLController">
+    <stylesheets>
+        <URL value="@empleadosfxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="-4.0" prefHeight="150.0" prefWidth="431.0" styleClass="labtitulo" text="Mantenimiento de Empleados" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="AGaramondPro-Regular" size="13.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="tabPane" layoutX="13.0" layoutY="161.0" prefHeight="531.0" prefWidth="889.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ver">
+               <content>
+                  <AnchorPane prefHeight="540.0" prefWidth="879.0" styleClass="tab">
+                     <children>
+                        <TableView fx:id="tablaEmpleados" layoutX="8.0" layoutY="76.0" prefHeight="345.0" prefWidth="866.0">
+                          <columns>
+                            <TableColumn fx:id="tabcol_idEmpleado" prefWidth="114.70148086547852" resizable="false" text="IDEmpleado" />
+                            <TableColumn fx:id="tabcol_nombre" prefWidth="109.76425170898438" text="Nombre" />
+                              <TableColumn fx:id="tabcol_apellido" prefWidth="95.23576354980469" text="Apellido" />
+                              <TableColumn fx:id="tabcol_direccion" prefWidth="117.85369873046875" text="Direccion" />
+                              <TableColumn fx:id="tabcol_estado" prefWidth="114.38217163085938" text="Estado_Activo" />
+                              <TableColumn fx:id="tabcol_sueldo" prefWidth="114.6177978515625" text="Sueldo" />
+                              <TableColumn fx:id="tabcol_cargo" prefWidth="178.25369262695312" text="Cargo" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="208.0" layoutY="16.0" prefHeight="51.0" prefWidth="395.0" text="Lista de Empleados">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="buscar_empleado" layoutX="17.0" layoutY="449.0" prefHeight="31.0" prefWidth="166.0" styleClass="buscar" />
+                        <Label layoutX="21.0" layoutY="432.0" text="Buscar por nombre: " />
+                        <HBox layoutX="187.0" layoutY="450.0" prefHeight="30.0" prefWidth="166.0" spacing="3.0">
+                           <children>
+                              <Button fx:id="boton_buscar" mnemonicParsing="false" onAction="#buscarOnAction" styleClass="botones" text="Buscar" />
+                              <Button fx:id="boton_terminar" mnemonicParsing="false" onAction="#boton_terminar" prefHeight="26.0" prefWidth="94.0" styleClass="botones" text="Ver Todos" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Editar">
+               <content>
+                  <AnchorPane prefHeight="562.0" prefWidth="879.0" styleClass="tab">
+                     <children>
+                        <TitledPane fx:id="datos_personales" animated="false" layoutX="28.0" layoutY="31.0" prefHeight="398.0" prefWidth="567.0" text="Datos Personales">
+                           <content>
+                              <AnchorPane prefHeight="372.0" prefWidth="495.0">
+                                 <children>
+                                    <TextField fx:id="text_usuario" layoutX="395.0" layoutY="249.0" />
+                                    <Label fx:id="dato_co" layoutX="338.0" layoutY="254.0" text="Usuario: " />
+                                    <Label fx:id="dato_no" layoutX="42.0" layoutY="40.0" text="Nombre:" />
+                                    <Label fx:id="dato_ce" layoutX="9.0" layoutY="121.0" text="Cédula o Ruc: " />
+                                    <Label fx:id="dato_di" layoutX="23.0" layoutY="165.0" text="Dirección:" />
+                                    <TextField fx:id="text_nombre" layoutX="107.0" layoutY="35.0" styleClass="textfields" />
+                                    <TextField fx:id="text_id" layoutX="107.0" layoutY="75.0" styleClass="textfields" />
+                                    <TextField fx:id="text_direccion" layoutX="107.0" layoutY="160.0" styleClass="textfields" />
+                                    <TextField fx:id="text_apellido" layoutX="107.0" layoutY="116.0" />
+                                    <Label fx:id="dato_ap" layoutX="42.0" layoutY="81.0" text="Apellido:" />
+                                    <Label fx:id="dato_ti" layoutX="317.0" layoutY="121.0" text="Sueldo:" />
+                                    <Label fx:id="dato_ap1" layoutX="321.0" layoutY="81.0" text="Cargo:" />
+                                    <TextField fx:id="text_cargo" layoutX="395.0" layoutY="75.0" />
+                                    <TextField fx:id="text_sueldo" layoutX="395.0" layoutY="116.0" />
+                                    <Label layoutX="319.0" layoutY="165.0" text="Estado:" />
+                                    <ChoiceBox fx:id="box_estado" layoutX="397.0" layoutY="160.0" prefHeight="27.0" prefWidth="96.0" />
+                                    <Label layoutX="345.0" layoutY="298.0" text="Clave: " />
+                                    <TextField fx:id="text_clave" layoutX="394.0" layoutY="291.0" />
+                                    <Label fx:id="texto_error" layoutX="68.0" layoutY="220.0" prefHeight="17.0" prefWidth="207.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <VBox fx:id="vbox_botones" alignment="CENTER" layoutX="651.0" layoutY="48.0" prefHeight="362.0" prefWidth="190.0" spacing="25.0" styleClass="vbox">
+                           <children>
+                              <Button fx:id="butt_nuevo" contentDisplay="CENTER" mnemonicParsing="false" onAction="#butt_nueOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #50aa60;" styleClass="botones" text="Nuevo">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="butt_agregar" mnemonicParsing="false" onAction="#butt_agrgOnAction" prefHeight="26.0" prefWidth="100.0" styleClass="botones" text="Agregar" />
+                              <Button fx:id="butt_limpiar" mnemonicParsing="false" onAction="#butt_limpiarOnAction" prefWidth="100.0" styleClass="botones" text="Limpiar" />
+                              <Button fx:id="butt_modificar" mnemonicParsing="false" onAction="#butt_modfOnAction" prefWidth="100.0" styleClass="botones" text="Modificar" />
+                              <Button fx:id="butt_eliminar" mnemonicParsing="false" onAction="#butt_elimOnAction" prefWidth="100.0" style="-fx-background-color: #a51818;" styleClass="botones" text="Eliminar" />
+                              <Button fx:id="butt_cancelar" mnemonicParsing="false" onAction="#butt_cancelOnAction" prefWidth="100.0" styleClass="botones" text="Cancelar" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Label fx:id="mensaje_nuevo" layoutX="333.0" layoutY="455.0" prefHeight="17.0" prefWidth="174.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="150.0" fitWidth="313.0" layoutX="592.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/empleados2.png" />
+         </image>
+      </ImageView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" />
+   </padding>
+</AnchorPane>

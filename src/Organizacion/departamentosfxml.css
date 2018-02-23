@@ -1,0 +1,36 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass {
+
+    -fx-background-color:  #eaeaea
+}
+
+.botones{
+    
+    -fx-font-family: "Verdana";
+    -fx-font-weight:bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #00345b;
+    -fx-padding: 5px;
+    -fx-border-radius: 3px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+
+
+.vbox{
+    
+    -fx-border-color: #d8d8d8;
+    -fx-background-color: #d8d8d8;
+        
+}
+
+.labtitulo{
+    
+    -fx-font-family: "Verdana";
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    
+}
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Organizacion.DepartamentosFXMLController">
+    <stylesheets>
+        <URL value="@departamentosfxml.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="9.0" layoutY="120.0" prefHeight="572.0" prefWidth="884.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Departamentos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab">
+                     <children>
+                        <GridPane hgap="15.0" layoutX="9.0" layoutY="20.0" prefHeight="161.0" prefWidth="314.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="116.45394897460938" minWidth="10.0" prefWidth="78.17772674560547" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.82227325439453" minWidth="10.0" prefWidth="216.82227325439453" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Codigo: " />
+                              <Label text="Nombre: " GridPane.rowIndex="1" />
+                              <Label text="Nomina: " GridPane.rowIndex="2" />
+                              <TextField fx:id="text_codigo" GridPane.columnIndex="1" />
+                              <TextField fx:id="text_nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="text_nomina" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tablaDepa" layoutX="23.0" layoutY="283.0" prefHeight="242.0" prefWidth="570.0">
+                          <columns>
+                            <TableColumn fx:id="tabcold_codigo" prefWidth="99.0" resizable="false" text="Codigo" />
+                            <TableColumn fx:id="tabcold_nombre" prefWidth="262.0" resizable="false" text="Nombre" />
+                              <TableColumn fx:id="tabcold_nomina" prefWidth="210.14669799804688" resizable="false" text="Nómina" />
+                          </columns>
+                        </TableView>
+                        <Pane layoutX="399.0" layoutY="24.0" prefHeight="179.0" prefWidth="431.0" styleClass="vbox">
+                           <children>
+                              <Button fx:id="butt_nuevo" contentDisplay="CENTER" layoutX="35.0" layoutY="27.0" mnemonicParsing="false" onAction="#butt_nueOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #50aa60;" styleClass="botones" text="Nuevo" />
+                              <Button fx:id="butt_agregar" layoutX="172.0" layoutY="27.0" mnemonicParsing="false" onAction="#butt_agrgOnAction" prefHeight="26.0" prefWidth="100.0" styleClass="botones" text="Agregar" />
+                              <Button fx:id="butt_limpiar" layoutX="97.0" layoutY="82.0" mnemonicParsing="false" onAction="#butt_limpiarOnAction" prefWidth="100.0" styleClass="botones" text="Limpiar" />
+                              <Button fx:id="butt_cancelar" layoutX="238.0" layoutY="82.0" mnemonicParsing="false" onAction="#butt_cancelOnAction" prefWidth="100.0" styleClass="botones" text="Cancelar" />
+                              <Button fx:id="butt_eliminar" layoutX="175.0" layoutY="135.0" mnemonicParsing="false" onAction="#butt_elimOnAction" prefWidth="100.0" style="-fx-background-color: #a51818;" styleClass="botones" text="Eliminar" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="25.0" layoutY="234.0" text="Descripcion: " />
+                        <HBox layoutX="202.0" layoutY="249.0" prefHeight="30.0" prefWidth="101.0">
+                           <children>
+                              <Button fx:id="boton_buscar" mnemonicParsing="false" onAction="#buscarOnAction" styleClass="botones" text="Buscar" />
+                              <Button fx:id="boton_terminar" mnemonicParsing="false" onAction="#boton_terminar" prefHeight="18.0" prefWidth="37.0" styleClass="botones" text="x" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="buscar_depa" layoutX="24.0" layoutY="250.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Bodegas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane hgap="15.0" layoutX="9.0" layoutY="20.0" prefHeight="161.0" prefWidth="314.0">
+                           <children>
+                              <Label text="Codigo: " />
+                              <Label text="Tipo:" GridPane.rowIndex="1" />
+                              <Label text="Direccion: " GridPane.rowIndex="2" />
+                              <TextField GridPane.columnIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="116.45394897460938" minWidth="10.0" prefWidth="78.17772674560547" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.82227325439453" minWidth="10.0" prefWidth="216.82227325439453" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <TableView layoutX="23.0" layoutY="273.0" prefHeight="242.0" prefWidth="570.0">
+                           <columns>
+                              <TableColumn fx:id="tabcolb_codigo" prefWidth="162.35015487670898" text="Codigo" />
+                              <TableColumn fx:id="tabcolb_nombre" prefWidth="197.85328674316406" text="Nombre" />
+                              <TableColumn fx:id="tabcolb_nomina" prefWidth="210.14669799804688" text="Nómina" />
+                           </columns>
+                        </TableView>
+                        <TextField layoutX="34.0" layoutY="238.0" />
+                        <HBox layoutX="210.0" layoutY="238.0" prefHeight="33.0" prefWidth="107.0">
+                           <children>
+                              <Button fx:id="boton_buscar1" mnemonicParsing="false" styleClass="botones" text="Buscar" />
+                              <Button fx:id="boton_terminar1" mnemonicParsing="false" prefHeight="18.0" prefWidth="37.0" styleClass="botones" text="x" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="38.0" layoutY="214.0" text="Buscar por descripción: " />
+                        <Pane layoutX="399.0" layoutY="24.0" prefHeight="179.0" prefWidth="431.0" styleClass="vbox">
+                           <children>
+                              <Button fx:id="butt_nuevo1" contentDisplay="CENTER" layoutX="35.0" layoutY="27.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #50aa60;" styleClass="botones" text="Nuevo" />
+                              <Button fx:id="butt_agregar1" layoutX="172.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" styleClass="botones" text="Agregar" />
+                              <Button fx:id="butt_limpiar1" layoutX="97.0" layoutY="82.0" mnemonicParsing="false" prefWidth="100.0" styleClass="botones" text="Limpiar" />
+                              <Button fx:id="butt_modificar1" layoutX="303.0" layoutY="27.0" mnemonicParsing="false" prefWidth="100.0" styleClass="botones" text="Modificar" />
+                              <Button fx:id="butt_cancelar1" layoutX="238.0" layoutY="82.0" mnemonicParsing="false" prefWidth="100.0" styleClass="botones" text="Cancelar" />
+                              <Button fx:id="butt_eliminar1" layoutX="175.0" layoutY="135.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #a51818;" styleClass="botones" text="Eliminar" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label contentDisplay="CENTER" layoutX="169.0" layoutY="33.0" styleClass="labtitulo" text="Departamentos y Bodegas: " textOverrun="CENTER_ELLIPSIS" />
+   </children>
+</AnchorPane>
